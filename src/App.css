@@ -1,0 +1,118 @@
+.app {
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #c0392b;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.timer {
+  font-size: 3.5rem;
+  font-variant-numeric: tabular-nums;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.2s;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+  background: #c0392b;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #ecf0f1;
+  color: #2c3e50;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #dfe6e9;
+}
+
+/* 计时结束弹窗 */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.75rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  min-width: 280px;
+  animation: scaleIn 0.25s ease-out;
+}
+
+.modal-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #c0392b;
+  margin-bottom: 0.5rem;
+}
+
+.modal-desc {
+  color: #555;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.modal .btn {
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
